@@ -14,7 +14,6 @@ function App() {
     setToDos((currentArray) => [toDo, ...currentArray]);
     setToDo("");
   };
-  console.log(toDos);
 
   return (
     <div>
@@ -27,13 +26,16 @@ function App() {
           placeholder="Write your to do ..." />
         <button>Add To Do</button>
       </form >
+      <hr />
+      <ul>
+        {toDos.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 export default App;
 
-// toDo = 6
-// currentArray = [ 1, 2, 3, 4, 5]
-// setToDos((currentArray) => [toDo, ...currentArray]);
-// [6, 1, 2, 3, 4, 5]
+//  map은 하나의 array에 있는 item을 내가 원하는 무엇이든지로 바꿔즈는 역할을 하고 새로운 array로 리턴
