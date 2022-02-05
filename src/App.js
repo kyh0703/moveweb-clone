@@ -17,6 +17,14 @@ function App() {
 export default App;
 
 /*
-path = /movie:id
-파라미터를 받을려면 useParam을 통해 가져올 수 있다.
+gh pages 배포 방법
+1. npm i gh-pages
+2. npm run build
+3. package json
+  "homepage": "https://kyh0703.github.io/movie-clone"
+4. mdfy script
+  deploy를 실행하면 predeploy가 실행된다.
+  "deploy": "gh-pages -d build",
+  "predeploy": "npm run build"
+5. build 파일을 지정한 "homepage"로 배포한다.
 */
